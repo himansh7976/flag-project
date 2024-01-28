@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+
+        .cont {
+            margin: auto;
+            height: 50vh;
+            width: 50%;
+
+        }
+
+        .imgg {
+            height: 50%;
+            width: 50%;
+
+            margin-top: 10%;
+
+            margin: auto;
+        }
+
+        input {
+            align-items: center;
+            text-align: center;
+            margin-left: 35%;
+            margin-top: 5%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: crimson;
+
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            background-color: rgb(89, 89, 109);
+            color: wheat;
+            border: none;
+            padding: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="cont">
+        <h1> country flag images</h1>
+        <div class="imgg">
+            <img src="https://flagcdn.com/160x120/in.png" alt="">
+        </div>
+
+        <input type="text" name="" id="inp" placeholder="search flag">
+        <button id="btn">submit</button>
+
+
+
+
+    </div>
+
+
+    <script src="data.js"></script>
+
+
+    <script>
+        let btn = document.querySelector("#btn");
+
+
+        btn.addEventListener("click", () => {
+            let val = document.querySelector("input").value;
+            for (let i in obj) {
+                if (obj[i] == val) {
+
+
+
+                    document.querySelector("img").src = `https://flagcdn.com/160x120/${i}.png`;
+                }
+            }
+
+        });
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
